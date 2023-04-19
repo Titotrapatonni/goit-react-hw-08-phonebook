@@ -18,7 +18,6 @@ export const ContactForm = () => {
   };
 
   const checkExistingContact = newContact => {
-    console.log(contacts);
     const checked = contacts.filter(contact => {
       return contact.name.toLowerCase() === newContact.name.toLowerCase();
     });

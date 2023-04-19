@@ -13,7 +13,6 @@ export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = newUser => {
-    console.log(newUser);
     dispatch(register(newUser));
   };
   return (

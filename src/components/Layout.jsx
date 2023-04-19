@@ -1,4 +1,3 @@
-// import styled from 'styled-components';
 import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
