@@ -9,7 +9,6 @@ import {
 } from 'redux/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
-import { Container } from '@mui/material';
 
 export const ContactList = () => {
   const dispatch = useDispatch();

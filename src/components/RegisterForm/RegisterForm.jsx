@@ -1,5 +1,5 @@
 import { Box, Button, Container } from '@mui/material';
-import { Field, Form, Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import { TextField } from 'formik-mui';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';

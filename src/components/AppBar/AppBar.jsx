@@ -4,8 +4,6 @@ import { Navigation } from 'components/Navigation/Navigation';
 import { UserMenu } from 'components/UserMenu/UserMenu';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'redux/selectors';
-import { Bar } from './AppBar.styled';
-import { Thumb } from 'components/UserMenu/UserMenu.styled';
 
 export const HeadBar = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
