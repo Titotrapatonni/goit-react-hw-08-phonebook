@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import { Input } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactsFilter } from 'redux/filter/filterSlice';

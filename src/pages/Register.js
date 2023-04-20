@@ -1,9 +1,10 @@
+import { Container } from '@mui/material';
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
 
 export default function Register() {
   return (
-    <div>
+    <Container>
       <RegisterForm />
-    </div>
+    </Container>
   );
 }

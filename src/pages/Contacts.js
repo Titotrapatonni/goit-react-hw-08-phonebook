@@ -1,3 +1,4 @@
+import { Container } from '@mui/material';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { ContactList } from 'components/ContactList/ContactList';
 import { Filter } from 'components/Filter/Filter';
@@ -13,12 +14,12 @@ export default function Contacts() {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <div>
+    <Container sx={{ marginTop: 4 }}>
       <HeroTitle>Phonebook</HeroTitle>
       <ContactForm />
       <Title>Contacts</Title>
       <Filter />
       <ContactList />
-    </div>
+    </Container>
   );
 }
