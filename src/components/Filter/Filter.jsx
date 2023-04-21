@@ -12,14 +12,6 @@ export const Filter = () => {
   };
 
   return (
-    // <TextField
-    //   type="text"
-    //   onChange={filterContact}
-    //   value={filter}
-    //   label="Filter"
-    //   name="filter"
-
-    // />
     <TextField
       sx={{ marginTop: 4, marginBottom: 1 }}
       label="Filter"

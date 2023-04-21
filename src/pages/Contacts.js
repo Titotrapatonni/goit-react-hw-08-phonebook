@@ -6,7 +6,6 @@ import { HeroTitle, Title } from 'components/Layout.styled';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/contacts/operations';
-// import { HeroTitle, Title } from 'components/Layout';
 
 export default function Contacts() {
   const dispatch = useDispatch();
