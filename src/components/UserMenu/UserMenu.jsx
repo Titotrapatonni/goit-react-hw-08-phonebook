@@ -9,16 +9,18 @@ export const UserMenu = () => {
   const userName = useSelector(selectUserName);
   return (
     <Thumb>
-      <p>Hi, {userName}</p>
+      <p>
+        Welcome <b>{userName}</b>
+      </p>
       <Button
         variant="contained"
-        disableElevation
+        // disableElevation
         type="button"
         onClick={() => {
           dispatch(logOut());
         }}
       >
-        Log Out
+        LogOut
       </Button>
     </Thumb>
   );

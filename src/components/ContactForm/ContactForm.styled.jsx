@@ -1,4 +1,4 @@
-import { Field } from 'formik';
+import { Field, Form } from 'formik';
 import styled from 'styled-components';
 
 export const Button = styled.button`
@@ -32,4 +32,12 @@ export const Input = styled(Field)`
   border: groove;
   border-radius: 8px;
   background-color: #f7f7f7c5;
+`;
+
+export const NewContactForm = styled(Form)`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 `;

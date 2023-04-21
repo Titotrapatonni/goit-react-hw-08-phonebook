@@ -14,7 +14,11 @@ export default function Contacts() {
     dispatch(fetchContacts());
   }, [dispatch]);
   return (
-    <Container sx={{ marginTop: 4 }}>
+    <Container
+      sx={{
+        marginTop: 4,
+      }}
+    >
       <HeroTitle>Phonebook</HeroTitle>
       <ContactForm />
       <Title>Contacts</Title>

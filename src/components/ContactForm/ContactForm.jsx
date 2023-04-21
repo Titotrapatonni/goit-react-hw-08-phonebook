@@ -1,8 +1,10 @@
-import { Formik, Form } from 'formik';
+import { Formik, Field } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
-import { Button, Input } from './ContactForm.styled';
 import { addContacts } from 'redux/contacts/operations';
 import { selectContacts } from 'redux/selectors';
+import { TextField } from 'formik-mui';
+import { Box, Button } from '@mui/material';
+import { NewContactForm } from './ContactForm.styled';
 
 const initialValues = {
   name: '',
@@ -33,30 +35,38 @@ export const ContactForm = () => {
     resetForm();
   };
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form autoComplete="off">
-        <label>
-          Name
-          <Input
+    <Box
+      sx={{
+        maxWidth: 600,
+      }}
+    >
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <NewContactForm autoComplete="off">
+          <Field
+            component={TextField}
             type="text"
             name="name"
+            label="Name"
             // pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             // required
           />
-        </label>
-        <label>
-          Phone
-          <Input
+
+          <Field
+            component={TextField}
             type="tel"
             name="number"
+            label="Phone"
             // pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             // title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             // required
           />
-        </label>
-        <Button type="submit">Add contact</Button>
-      </Form>
-    </Formik>
+
+          <Button type="submit" variant="contained">
+            Add contact
+          </Button>
+        </NewContactForm>
+      </Formik>
+    </Box>
   );
 };
